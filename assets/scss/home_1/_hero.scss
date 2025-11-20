@@ -1,0 +1,103 @@
+.rh-hero-content{
+	z-index: 1;
+	padding-top: 285px;
+	border-bottom-left-radius: 32px;
+	border-bottom-right-radius: 32px;
+	.rh-hero-shape {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: -2;
+		height: 100%;
+		max-height: 850px;
+		background-color: #fff;
+		background-color: #000000;
+		clip-path: polygon( 0% 92.752%,0% 0%,100% 0%,100% 51.222%,100% 51.222%,99.963% 52.303%,99.856% 53.336%,99.683% 54.31%,99.45% 55.212%,99.162% 56.029%,98.823% 56.75%,98.439% 57.362%,98.016% 57.852%,97.557% 58.208%,97.068% 58.418%,41.907% 72.967%,41.907% 72.967%,41.574% 73.092%,41.253% 73.287%,40.944% 73.549%,40.65% 73.875%,40.373% 74.262%,40.114% 74.705%,39.877% 75.204%,39.662% 75.753%,39.473% 76.351%,39.31% 76.994%,35.079% 95.921%,35.079% 95.921%,34.894% 96.642%,34.675% 97.303%,34.426% 97.902%,34.15% 98.435%,33.849% 98.896%,33.527% 99.283%,33.186% 99.591%,32.829% 99.815%,32.46% 99.953%,32.081% 100%,3.333% 100%,3.333% 100%,2.793% 99.905%,2.28% 99.63%,1.801% 99.191%,1.365% 98.602%,0.976% 97.877%,0.643% 97.033%,0.372% 96.083%,0.17% 95.043%,0.044% 93.928%,0% 92.752% );
+		img {
+			opacity: .28;
+			mix-blend-mode: luminosity;
+		}
+	}
+	.rh-hero-bg {
+		left: 0;
+		bottom: 0;
+		z-index: -3;
+		height: 70%;
+		width: 100%;
+	}
+	.rh-hero-bg2 {
+		left: 0;
+		bottom: 0%;
+		width: 100%;
+		height: 82%;
+		z-index: -1;
+	}
+}
+.rh-hero-text {
+	max-width: 620px;
+	padding-bottom: 260px;
+	.hero_text {
+		color: #fff;
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 1.1;
+		margin-bottom: 20px;
+	}
+	p {
+		color: #fff;
+		opacity: .8;
+		font-weight: 500;
+		margin-bottom: 40px;	
+	}
+}
+
+.rh-hero-search {
+	z-index: 1;
+	height: 215px;
+	margin-top: 305px;
+	.rh-search-shape {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		height: 100%;
+	}
+}
+.rh-hero-filter-btn {
+	padding: 28px;
+	display: inline-block;
+	li {
+		margin-right: 18px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.nav-tabs .nav-link {
+		position: relative;
+		transition: all 300ms ease-in-out;
+		i {
+			right: 0;
+			opacity: 0;
+			bottom: -0px;
+			position: absolute;
+			transition: all 200ms ease-in-out;
+		}
+	}
+	.nav-tabs .nav-link,
+	.nav-tabs .nav-link.active  { 
+		font-size: 16px;
+		font-weight: 500;
+		padding: 12px 24px;
+		border-radius: 8px;
+		color: var(--rh-title-color);
+	}
+	.nav-tabs .nav-link.active {
+		color: #fff;
+		box-shadow: 4px 8px 17px 0px #00000040;
+		background-color: var(--rh-prime-c);
+		i {
+			opacity: 1;
+			bottom: -10px;
+		}
+	}
+}
