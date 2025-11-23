@@ -196,45 +196,464 @@
 				<div class="rh-hero-search position-relative">
 					<div class="rh-search-shape position-absolute">
 						<svg width="1416" height="231" viewBox="0 0 1416 231" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<foreignObject x="-15" y="-15" width="1446" height="261"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(7.5px);clip-path:url(#bgblur_0_246_38_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="15">
+							<foreignObject x="-15" y="-15" width="1446" height="261"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(7.5px);clip-path:url(#bgblur_0_246_38_clip_path);height:100%;width:100%"></div></foreignObject>
+							<g data-figma-bg-blur-radius="15">
 								<path d="M1408 211C1408 217.627 1402.63 223 1396 223H20C13.3726 223 8 217.627 8 211V20C8 13.3726 13.3726 8 20 8H281C287.627 8 293 13.3726 293 20V78C293 84.6274 298.373 90 305 90H1396C1402.63 90 1408 95.3726 1408 102V211Z" fill="white"/>
 								<path d="M281 4C289.837 4 297 11.1634 297 20V78C297 82.4183 300.582 86 305 86H1396C1404.84 86 1412 93.1634 1412 102V211C1412 219.837 1404.84 227 1396 227H20C11.1635 227 4 219.837 4 211V20C4 11.1634 11.1634 4 20 4H281Z" stroke="white" stroke-opacity="0.12" stroke-width="8"/>
 							</g>
 							<defs>
 								<clipPath id="bgblur_0_246_38_clip_path" transform="translate(15 15)"><path d="M1408 211C1408 217.627 1402.63 223 1396 223H20C13.3726 223 8 217.627 8 211V20C8 13.3726 13.3726 8 20 8H281C287.627 8 293 13.3726 293 20V78C293 84.6274 298.373 90 305 90H1396C1402.63 90 1408 95.3726 1408 102V211Z"/>
-								</clipPath></defs>
-							</svg>
+								</clipPath>
+							</defs>
+						</svg>
+					</div>
+					<div class="rh-hero-filter-btn tx-tab-btn ul-li">
+						<ul class="nav nav-tabs" id="log-price-tab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<div class="nav-link active" id="price_tab_1" data-bs-toggle="tab" data-bs-target="#track_1_1"  role="tab"  aria-selected="false">
+									For Rent
+									<i>
+										<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.7158 21.0339C18.0492 21.8037 19.7158 20.8414 19.7158 19.3018L19.7158 5.21653e-05L-2.38419e-07 11.383L16.7158 21.0339Z" fill="#B79B6F"/>
+										</svg>
+									</i>
+								</div>
+							</li>
+							<li class="nav-item" role="presentation">
+								<div class="nav-link" id="price_tab_2" data-bs-toggle="tab" data-bs-target="#track_1_2"  role="tab"  aria-selected="false">
+									For sale
+									<i>
+										<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.7158 21.0339C18.0492 21.8037 19.7158 20.8414 19.7158 19.3018L19.7158 5.21653e-05L-2.38419e-07 11.383L16.7158 21.0339Z" fill="#B79B6F"/>
+										</svg>
+									</i>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="rh-hero-filter-field">
+						<form action="#">
+							<div class="rh-hero-filter-area d-flex justify-content-between align-items-end">
+								<div class="rh-filter-field">
+									<label>Looking For *</label>
+									<input type="text" placeholder="Enter keyword ...">
+								</div>
+								<div class="rh-filter-field">
+									<label>Location *</label>
+									<div class="inner-select position-relative">
+										<select>
+											<option>All Cities</option>
+											<option>London</option>
+											<option>Paris</option>
+											<option>Madrid</option>
+											<option>Barlin</option>
+											<option>New York</option>
+										</select>
+									</div>
+								</div>
+								<div class="rh-filter-field">
+									<label>Bedrooms *</label>
+									<div class="inner-select position-relative">
+										<select>
+											<option>Any Bedrooms</option>
+											<option>4 Bed</option>
+											<option>3 Bed</option>
+											<option>2 Bed</option>
+											<option>1 Bed</option>
+											<option>Couple Bed</option>
+										</select>
+									</div>
+								</div>
+								<div class="rh-filter-field">
+									<label>Your Budget *</label>
+									<div class="inner-select position-relative">
+										<select>
+											<option>Max. Price</option>
+											<option>High > Low</option>
+											<option>Low > High</option>
+											<option>Min. Price</option>
+										</select>
+									</div>
+								</div>
+								<button>Search Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of Hero section
+	============================================= -->	
+
+<!-- Start of About section
+	============================================= -->
+	<section id="rh-about" class="rh-about-sec pt-125 over-hidden position-relative">
+		<span class="rh-ab-shape text-center position-absolute">
+			<svg width="1400" height="700" viewBox="0 0 1400 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_210_604)">
+					<circle cx="700" r="99.5" stroke="black"/>
+					<circle cx="700" r="249.5" stroke="black"/>
+					<circle cx="700" r="399.5" stroke="black"/>
+					<circle cx="700" r="549.5" stroke="black"/>
+					<circle cx="700" r="699.5" stroke="black"/>
+				</g>
+				<defs>
+					<clipPath id="clip0_210_604">
+						<rect width="1400" height="700" fill="white"/>
+					</clipPath>
+				</defs>
+			</svg>
+		</span>
+		<span class="rh-ab-shape2 position-absolute"><img src="assets/img/shape/shape2.png" alt=""></span>
+		<div class="container">
+			<div class="rh-about-title d-flex justify-content-end">
+				<div class="rh-sec-title headline">
+					<div class="subtitle">
+						<span>01</span> About us
+					</div>
+					<h2 class="sec_title">Crafting exceptional riverfront living experiences with trusted real estate expertise, premium properties, and a passion for community growth.</h2>
+				</div>
+			</div>
+			<div class="rh-about-content d-flex justify-content-between mt-60">
+				<div class="rh-about-wrap1 mt-40">
+					<div class="rh-about-list mb-50 ul-li">
+						<ul>
+							<li>Classical Architecture</li>
+							<li>Property For Sale</li>
+							<li>Real Estate</li>
+							<li>Luxury Homes</li>
+							<li>Exclusive Listings</li>
+							<li>Trusted Realtor</li>
+							<li>Interior Design</li>
+							<li>Prime Location</li>
+						</ul>
+					</div>
+					<div class="rh-about-img1">
+						<div class="item-img img-cover">
+							<img src="assets/img/about/ab1.jpg" alt="">
 						</div>
-						<div class="rh-hero-filter-btn tx-tab-btn ul-li">
-							<ul class="nav nav-tabs" id="log-price-tab" role="tablist">
-								<li class="nav-item" role="presentation">
-									<div class="nav-link active" id="price_tab_1" data-bs-toggle="tab" data-bs-target="#track_1_1"  role="tab"  aria-selected="false">
-										For Rent
-										<i>
-											<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M16.7158 21.0339C18.0492 21.8037 19.7158 20.8414 19.7158 19.3018L19.7158 5.21653e-05L-2.38419e-07 11.383L16.7158 21.0339Z" fill="#B79B6F"/>
-											</svg>
-										</i>
-									</div>
-								</li>
-								<li class="nav-item" role="presentation">
-									<div class="nav-link" id="price_tab_2" data-bs-toggle="tab" data-bs-target="#track_1_2"  role="tab"  aria-selected="false">
-										For sale
-										<i>
-											<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M16.7158 21.0339C18.0492 21.8037 19.7158 20.8414 19.7158 19.3018L19.7158 5.21653e-05L-2.38419e-07 11.383L16.7158 21.0339Z" fill="#B79B6F"/>
-											</svg>
-										</i>
-									</div>
-								</li>
-							</ul>
+					</div>
+				</div>
+				<div class="rh-about-wrap2">
+					<div class="rh-about-img2">
+						<div class="item-img mb-60 img-cover">
+							<img src="assets/img/about/ab2.jpg" alt="">
+						</div>
+						<div class="item-text mb-40">
+							Riverhouse Real Estate delivers premium riverfront living with expert guidance, modern property solutions, and personalized service that prioritizes comfort, lasting investment value, and strong community connection.
+						</div>
+						<div class="rh-btn1 ver_2">
+							<a href="#">
+								<span>
+									Know About Us
+									<i>
+										<svg width="40" height="25" viewBox="0 0 40 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_2001_64)">
+												<path d="M-8.50684 -10C-0.0508685 -10 7.46135 -5.96273 12.2094 0.288986C14.2444 2.96852 17.2066 5 20.5713 5C23.936 5 26.8982 2.9685 28.9332 0.28894C33.6812 -5.96278 41.1934 -9.99999 49.6494 -10H51C65.3594 -10 77 1.6406 77 16C77 30.3594 65.3594 42 51 42H49.6494C38.2436 42 28.5547 34.6552 25.0512 24.4375C24.3805 22.4814 22.6392 21 20.5713 21C18.5034 21 16.7621 22.4814 16.0914 24.4375C12.5878 34.6552 2.89901 42 -8.50684 42H-134C-148.359 42 -160 30.3594 -160 16C-160 1.6406 -148.359 -10 -134 -10H-8.50684Z" fill="#000000"></path>
+											</g>
+										</svg>
+									</i>
+								</span>
+								<i class="btn-icon fa-solid fa-arrow-right"></i>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-<!-- End of Hero section
+		</div>
+	</section>
+<!-- End of About section
 	============================================= -->	
+
+<!-- Start of Properties section
+	============================================= -->
+	<section id="rh-properti" class="rh-properti-sec over-hidden pb-60 pt-125">
+		<div class="rh-sec-title text-center headline">
+			<div class="subtitle">
+				<span>02</span> Global Properties
+			</div>
+			<h2 class="sec_title">Find Your Perfect Rural 
+			Dream House.</h2>
+		</div>
+		<div class="rh-properti-content position-relative">
+			<div class="rh-properti-slider swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro1.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Japan</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro2.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">France</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro7.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Italy</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro4.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Spain</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro5.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Portugal</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro6.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Morocco</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro7.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Norway</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro1.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Sweden</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro4.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Spain</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro5.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Portugal</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="rh-properti-item">
+							<div class="item-inner">
+								<div class="item-img img-cover">
+									<img src="assets/img/property/pro6.jpg" alt="">
+								</div>
+								<div class="item-text headline d-flex align-items-center justify-content-between">
+									<div class="inner-text">
+										<h3><a href="#">Morocco</a></h3>
+										<span>12+ Properties</span>
+									</div>
+									<div class="item-arrow">
+										<a href="#"><i class="fa-solid fa-angle-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rh-property-nav">
+				<div class="rh-pro-prev d-flex align-items-center justify-content-center"><i class="fa-solid fa-chevron-left"></i></div>
+				<div class="rh-pro-next d-flex align-items-center justify-content-center"><i class="fa-solid fa-chevron-right"></i></div>
+			</div>
+		</div>
+	</section>
+<!-- End of Properties section
+	============================================= -->	
+
+<!-- Start of Video section
+	============================================= -->
+	<section id="rh-video" class="rh-video-sec over-hidden position-relative">
+		<div class="rh-video-wrap img-cover over-hidden">
+			<video autoplay="" muted="" loop="" playsinline="" preload="metadata"><source src="assets/img/01.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="rh-video-text marquee-left over-hidden headline text-uppercase">
+			<h2>RiverHouse - Real Estate</h2>
+			<h2>RiverHouse - Real Estate</h2>
+			<h2>RiverHouse - Real Estate</h2>
+			<h2>RiverHouse - Real Estate</h2>
+		</div>
+	</section>
+<!-- End of Video section
+	============================================= -->
+
+
+<!-- Start of Top Properties
+	============================================= -->
+	<section id="rh-top-property" class="rh-top-property-sec pt-125 pb-125 position-relative">
+		<span class="rh-tp-bg position-absolute img-cover"><img src="assets/img/bg/tp-bg.jpg" alt=""></span>
+		<div class="container">
+			<div class="rh-sec-title text-center headline">
+				<div class="subtitle">
+					<span>03</span> Top Properties
+				</div>
+				<h2 class="sec_title">Find Your Perfect Property With Expert Guidance.</h2>
+			</div>
+			<div class="rh-tp-filter-btn mt-45 text-center">
+				<div class="button-group p-filter-btn  clearfix">
+					<button class="filter-button is-checked" data-filter="*">All </button>
+					<button class="filter-button" data-filter=".business">Apartments</button>
+					<button class="filter-button" data-filter=".design"> Villas</button>
+					<button class="filter-button" data-filter=".health">Duplex Home</button>
+					<button class="filter-button" data-filter=".health2">Townhouse</button>
+					<button class="filter-button" data-filter=".health3">Luxury Villas</button>
+					<button class="filter-button" data-filter=".health4">Offices</button>
+					<button class="filter-button" data-filter=".health5">Studio Apartments</button>
+				</div>
+			</div>
+			<div class="filtr-container-area p-filter-area grid clearfix" data-isotope="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 0 } }">
+				<div class="grid-sizer"></div>
+				<div class="grid-item grid-size-33 business" data-category="business">
+					<div class="rh-tp-item position-relative">
+						<div class="item-img">
+							<img src="assets/img/property/pro8.jpg" alt="">
+						</div>
+						<div class="item-text  headline">
+							<span><i class="fa-solid fa-location-dot"></i> Royal Ln. Jersey</span>
+							<h3><a href="#">Gorgeous Apartment Building</a></h3>
+							<div class="item-meta">
+								<a href="#"><i><img src="assets/img/icon/ic1.svg" alt=""></i> Beds: <span>4</span></a>
+								<a href="#"><i><img src="assets/img/icon/ic2.svg" alt=""></i> Baths: <span>2</span></a>
+								<a href="#"><i><img src="assets/img/icon/ic3.svg" alt=""></i> sqft: <span>1200</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End of Top Properties
+	============================================= -->	
+
 
 	<!-- For Js Library -->
 	<script src="assets/js/jquery-3.7.0.min.js"></script>

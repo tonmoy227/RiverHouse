@@ -1,0 +1,22 @@
+.rh-video-wrap {
+	max-height: 680px;
+	background-color: var(--rh-prime-c);
+	video {
+		mix-blend-mode: hard-light;
+	}
+}
+.rh-video-text {
+	left: 0;
+	bottom: -45px;
+	position: absolute;
+	display: flow-root;
+	h2 {
+		color: #fff;
+		line-height: 1;
+		font-size: 200px;
+		font-weight: 700;
+		letter-spacing: -2px;
+		display: inline-block;
+		text-shadow: 5px 5px #000000;
+	}
+}
