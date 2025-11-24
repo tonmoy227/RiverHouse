@@ -18,7 +18,7 @@ body {
 	-moz-osx-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased; 
 	.container {
-		max-width: 1412px;
+		max-width: 1424px;
 	}
 	.row {
 		--bs-gutter-x: 32px;
@@ -380,6 +380,9 @@ a {
 		@media #{$xxxs} {
 			font-size: 30px;
 		}
+	}
+	p {
+		padding-top: 20px;
 	}
 }
 

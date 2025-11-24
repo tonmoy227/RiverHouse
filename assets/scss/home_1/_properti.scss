@@ -91,12 +91,19 @@
 		width: 100%;
 		height: 100%;
 	}
+	.rh-btn1 {
+		a {
+			span {
+				color: #000000;
+			}
+		}
+	}
 }
 .rh-tp-filter-btn {
 	button {
 		color: #fff;
 		border: none;
-		margin: 0px 2px;
+		margin: 4px 2px;
 		font-size: 16px;
 		font-weight: 500;
 		padding: 9px 24px;
@@ -106,6 +113,110 @@
 		&:is(.is-checked) {
 			color: #000;
 			background-color: var(--rh-prime-c);
+		}
+	}
+}
+.rh-tp-item {
+	overflow: hidden;
+	border-radius: 12px;
+	background: #FFFFFF1F;
+	backdrop-filter: blur(20px);
+	.item-text {
+		padding: 25px 30px 28px;
+		@media #{$xxs} {
+			padding: 25px 16px 28px;
+		}
+		.inner-location {
+			color: #fff;
+			font-size: 16px;
+			margin-bottom: 10px;
+			i {
+				margin-right: 8px;
+			}
+		}
+		h3 {
+			color: #fff;
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			@media #{$xxs} {
+				font-size: 20px;
+			}
+		}
+		.item-meta {
+			gap: 8px 28px;
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 16px;
+			padding-bottom: 14px;
+			border-bottom: 1px solid rgba(255, 255, 255, .16);
+			a {
+				gap: 4px;
+				display: flex;
+				align-items: center;
+				color: rgba(255, 255, 255, .60);
+				font-size: 16px;
+				i {
+					margin-right: 2px;
+				}
+				span {
+					font-weight: 500;
+					color: rgba(255, 255, 255, 1);
+				}
+			}
+		}
+		.item-price {
+			.item-auth {
+				gap: 12px;
+				.auth-img {
+					width: 44px;
+					height: 44px;
+					overflow: hidden;
+					border-radius: 100%;
+				}
+				.auth-name {
+					color: #fff;
+					font-size: 16px;
+				}
+			}
+		}
+		.price-value {
+			color: #F5F5F5;
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+}
+
+.rh-tp-filter-area { 
+	margin: 0px -16px;
+	.grid-sizer {
+		width: 33.33%;
+		@media #{$lg} {
+			width: 50%;
+		}
+		@media #{$md} {
+			width: 50%;
+		}
+		@media #{$sm,$xs,$xxs} {
+			width: 100%;
+		}
+	}
+	.grid-item {
+		float: left;
+		padding: 16px;
+		display: inline-block;
+	} 
+	.grid-size-33 {
+		width: 33.33%;
+		@media #{$lg} {
+			width: 50%;
+		}
+		@media #{$md} {
+			width: 50%;
+		}
+		@media #{$sm,$xs,$xxs} {
+			width: 100%;
 		}
 	}
 }

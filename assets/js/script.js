@@ -131,7 +131,7 @@ Last change:    00/00/00
 	});
 	$('.marquee-right').marquee({
 		gap: 28,
-		speed: 40,
+		speed: 20,
 		delayBeforeStart: 0,
 		direction: 'right',
 		duplicated: true,
