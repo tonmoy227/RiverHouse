@@ -130,7 +130,7 @@ Last change:    00/00/00
 		startVisible:true,
 	});
 	$('.marquee-right').marquee({
-		gap: 28,
+		gap: 0,
 		speed: 20,
 		delayBeforeStart: 0,
 		direction: 'right',
@@ -243,6 +243,138 @@ Last change:    00/00/00
 			$(this).addClass("is-checked");
 		});
 	});
+	if (window.innerWidth > 991) {
+		if($('.rh-project-sec').length) {
+			const fxnoscrollcontent = document.querySelector('.rh-project-sec');
+			const fxh5 = document.body;
+
+			fxnoscrollcontent.addEventListener('mouseenter', function() {
+
+				fxh5.classList.add('lenis');
+			});
+			fxnoscrollcontent.addEventListener('mouseleave', function() {
+
+				fxh5.classList.remove('lenis');
+
+			});
+		}
+
+
+		const target = document.querySelector('.rh-project-sec');
+		if (target) {
+			const observer = new IntersectionObserver(function (entries) {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						lenis.scrollTo(entry.target, {
+							duration: 1,
+							easing: (t) => Math.min(1, 1.001 - Math.pow(2, -0 * t)),
+						});
+					}
+				});
+			}, { threshold: 0.1 });
+
+			observer.observe(target);
+		} 
+	}
+	var quick_view = new Swiper(".rh-project-thumb", {
+		spaceBetween: 8,
+		slidesPerView: 5,
+		speed: 1000,
+		direction: 'vertical',
+		mousewheel: true,
+		autoplay: {
+			enabled: true,
+			delay: 5000
+		},
+		breakpoints: {  
+			'1400': {
+				slidesPerView: 5,
+			},
+			'1200': {
+				slidesPerView: 5,
+			},
+			'992': {
+				slidesPerView: 5,
+			},
+			'480': {
+				slidesPerView: 5,
+			},
+			'0': {
+				slidesPerView: 5,
+			},
+		},
+	});
+
+	var swiper2 = new Swiper(".rh-project-slider", {
+		spaceBetween: 0,
+		speed: 1000,
+		slidesPerView: 1,
+		mousewheel: {
+			releaseOnEdges: true,
+		},
+		thumbs: {
+			swiper: quick_view,
+		},
+	});
+
+	if ($('.rh-sponsor-slider').length > 0 ) {
+		var slider = new Swiper('.rh-sponsor-slider', {
+			spaceBetween: 100,
+			slidesPerView: 6,
+			loop: true,
+			speed: 400,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 6,
+				},
+				'1200': {
+					slidesPerView: 5,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				'768': {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				'576': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'480': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				'0': {
+					slidesPerView: 2,
+				},
+			},
+		});
+	};
+
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var ATWORKPROCESS = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.rh-testi-sec',
+				start: "top -10%",
+				end: "top -100%",
+				scrub: 1,
+				pin: true,
+				pinSpacing: true,
+				markers: false,
+			}
+
+		});
+		ATWORKPROCESS
+		.from( ".rh-testi-item:nth-child(1)" , { yPercent: 10, xPercent: 185, rotate: -12,   duration: 1, ease: "power2.out"})
+		.from( ".rh-testi-item:nth-child(2)" , { yPercent: 3,  xPercent: 95, rotate: -8,   duration: 1, ease: "power2.out"},"<")
+		.from( ".rh-testi-item:nth-child(4)" , { yPercent: 3,  xPercent: -92, rotate: 8,   duration: 1, ease: "power2.out"},"<")
+		.from( ".rh-testi-item:nth-child(5)" , { yPercent: 10,  xPercent: -185, rotate: 10,   duration: 1, ease: "power2.out"},"<")
+
+	};
+
 
 
 })(jQuery);
