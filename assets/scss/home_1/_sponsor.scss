@@ -1,3 +1,25 @@
+@keyframes hithere {
+	30% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	40%, 60% {
+		-webkit-transform: rotate(-10deg) scale(1.1);
+		transform: rotate(-10deg) scale(1.1);
+	}
+	50% {
+		-webkit-transform: rotate(10deg) scale(1.1);
+		transform: rotate(10deg) scale(1.1);
+	}
+	70% {
+		-webkit-transform: rotate(0deg) scale(1.1);
+		transform: rotate(0deg) scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
 .rh-sponsor-img {
 	.item-img {
 		height: 90px;
@@ -5,5 +27,10 @@
 		cursor: pointer;
 		align-items: center;
 		justify-content: center;
+	}
+	&:hover {
+		.item-img {
+			animation: hithere 1s ease infinite;
+		}
 	}
 }

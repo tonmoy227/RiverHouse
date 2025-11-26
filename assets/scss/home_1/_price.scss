@@ -99,6 +99,10 @@
 			background-color: #F5F5F5;
 			color: var(--rh-title-color);
 			box-shadow: 5px 5px 12px 0px #00000047;
+			&:hover {
+				letter-spacing: 1px;
+				background-color: var(--rh-prime-c);
+			}
 		}
 	}
 	&:is(.popular) {

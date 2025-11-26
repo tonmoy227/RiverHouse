@@ -15,6 +15,9 @@
 			overflow: hidden;
 			border-radius: 16px;
 			margin-bottom: 16px;
+			img {
+				transition: all 500ms ease-in-out;
+			}
 		}
 		.item-text {
 			padding: 0px 16px 4px;
@@ -23,6 +26,9 @@
 			h3 {
 				font-size: 20px;
 				font-weight: 400;
+				&:hover {
+					letter-spacing: 1px;
+				}
 			}
 			span {
 				color: #666666;
@@ -36,6 +42,11 @@
 		}
 		&:hover {
 			box-shadow: 12px 12px 28px 0px #00000052;
+			.item-img {
+				img {
+					transform: scale(1.3) rotate(5deg);
+				}
+			}
 		}
 	}
 }
@@ -121,6 +132,14 @@
 	border-radius: 12px;
 	background: #FFFFFF1F;
 	backdrop-filter: blur(20px);
+	transition: all 500ms ease-in-out;
+	.item-img {
+		overflow: hidden;
+		img {
+			transform: scale(1.1);
+			transition: all 500ms ease-in-out;
+		}
+	}
 	.item-text {
 		padding: 25px 30px 28px;
 		@media #{$xxs} {
@@ -141,6 +160,9 @@
 			margin-bottom: 16px;
 			@media #{$xxs} {
 				font-size: 20px;
+			}
+			&:hover {
+				letter-spacing: 1px;
 			}
 		}
 		.item-meta {
@@ -184,6 +206,14 @@
 			color: #F5F5F5;
 			font-size: 20px;
 			font-weight: 600;
+		}
+	}
+	&:hover {
+		transform: translateY(-10px);
+		.item-img {
+			img {
+				transform: scale(1.0);
+			}
 		}
 	}
 }

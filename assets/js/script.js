@@ -80,6 +80,19 @@ Last change:    00/00/00
 			jQuery(this).parent().find("> .dropdown-menu").toggleClass("active"),
 			jQuery(this).parent().find("> .dropdown-menu").slideToggle());
 	});
+	jQuery(document).ready(function (o) {
+		0 < o(".navSidebar-button").length &&
+		o(".navSidebar-button").on("click", function (e) {
+			e.preventDefault(), e.stopPropagation(), o(".info-group").addClass("isActive");
+		}),
+		0 < o(".close-side-widget").length &&
+		o(".close-side-widget").on("click", function (e) {
+			e.preventDefault(), o(".info-group").removeClass("isActive");
+		}),
+		o(".xs-sidebar-widget").on("click", function (e) {
+			e.stopPropagation();
+		})
+	});
 	// Background Image
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
@@ -153,6 +166,53 @@ Last change:    00/00/00
 
 			}
 			setTimeout(function() {
+
+				if($(".rh_hero_title").length) {
+					var NXSECTITLE = $(".rh_hero_title");
+					if(NXSECTITLE.length == 0) return; gsap.registerPlugin(SplitText); NXSECTITLE.each(function(index, el) {
+
+						el.split = new SplitText(el, { 
+							type: "lines,words,chars",
+							linesClass: "split-line"
+						});
+
+						gsap.set(el, { perspective: 400 });
+
+						if( $(el).hasClass('hero_title_1') ){
+							gsap.set(el.split.chars, {
+								x: 100,
+								opacity: 0,
+								scaleX: 0,
+								rotationX: 15,
+							});
+						}
+						el.anim = gsap.to(el.split.chars, {
+							scrollTrigger: {
+								trigger: el,
+								start: "top 90%",
+								toggleActions: "play reverse play reverse",
+								markers: false,
+							},
+							x: 0,
+							y: 0,
+							scaleX: 1,
+							scaleY: 1,
+							opacity: 1,
+							duration: 1,
+							stagger: .05,
+							rotationX: 0,
+							delay: .1,
+							ease: "power3.inOut",
+						});
+					});
+				}
+
+				const RHHERO = gsap.timeline();
+				RHHERO
+				.from(".rh-hero-content .rh-hero-bg2", { opacity:0, rotate: 0,  yPercent: 100, duration: 1, transformOrigin: "center",   ease: "power1.out" })
+				.from(".rh-hero-content .rh-hero-shape img", { scale: 1.5,   duration: 2, transformOrigin: "center",   ease: "power1.out" })
+				.from(".rh-hero-text p", { opacity:0, rotate: 0,  yPercent: 100, duration: .5, transformOrigin: "center",   ease: "power1.out" },"<= .3")
+				.from(".rh-hero-text .rh-btn1", { opacity:0, rotate: 0,  yPercent: 100, duration: .5, transformOrigin: "center",   ease: "power1.out" },"<= .3")
 				
 			}, 700);
 		})		
@@ -308,6 +368,7 @@ Last change:    00/00/00
 	var swiper2 = new Swiper(".rh-project-slider", {
 		spaceBetween: 0,
 		speed: 1000,
+		effect: "fade",
 		slidesPerView: 1,
 		mousewheel: {
 			releaseOnEdges: true,
@@ -354,7 +415,7 @@ Last change:    00/00/00
 		});
 	};
 
-	if (window.matchMedia("(min-width: 1200px)").matches) { 
+	if (window.matchMedia("(min-width: 1700px)").matches) { 
 		var ATWORKPROCESS = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.rh-testi-sec',
@@ -375,6 +436,156 @@ Last change:    00/00/00
 
 	};
 
+	gsap.to(".rh-ab-shape svg circle", {
+		transformOrigin: "center center",
+		transformBox: "fill-box",
+		scale: 1.1,
+		repeat: -1,
+		yoyo: true,
+		duration: 2,
+		ease: "sine.inOut",
+		stagger: 0.2
+	});
 
+	if($('.rh-itm-title').length) {
+		var txtheading = $(".rh-itm-title");
+		if(txtheading.length == 0) return; gsap.registerPlugin(SplitText); txtheading.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+			if( $(el).hasClass('rh-itm-anim') ){
+				gsap.set(el.split.chars, {
+					opacity: .3,
+					x: "-7",
+				});
+			}
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 92%",
+					end: "top 60%",
+					markers: false,
+					scrub: 1,
+				},
+
+				x: "0",
+				y: "0",
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
+
+		});
+	}
+
+	gsap.utils.toArray(' .top_view_2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 4,
+				start: "top 50%",
+				end: "top 20%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, y: "-300"})
+	});
+
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 50%",
+				start: "top 200%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, {  scale: 1, y: "300"})
+	});
+	gsap.utils.toArray(' .top_view_list').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 80%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0, scale: 1, y: "100"})
+	});
+
+	gsap.utils.toArray(' .ser_img').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 90%",
+				start: "top 110%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0, scale: 1,  yPercent: "100"})
+	}); 
+
+	gsap.utils.toArray(".img-parallax").forEach(function(container) {
+		let image = container.querySelector("img");
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				scrub: true,
+				pin: false,
+			},
+		}); 
+		tl.from(image, {
+			yPercent: -30,
+			ease: "none",
+		}).to(image, {
+			yPercent: 30,
+			ease: "none",
+		}); 
+	}); 
+
+	$('.counter').counterUp({
+		delay: 20,
+		time: 5000
+	});
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var TVABT = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.rh-static-sec',
+				start: "top 25%",
+				toggleActions: 'play none none reverse',
+				markers: false,
+			}
+
+		});
+		TVABT
+		.from(".rh-static-item1 .rh-static-gallery1 li:nth-child(1)", { opacity: 0, rotate:'0deg', xPercent: 50,  duration: 2,   ease: "elastic.out(1,0.7)" })
+		.from(".rh-static-item1 .rh-static-gallery1 li:nth-child(2)", { opacity: 0, rotate:'0deg',  yPercent: 100, duration: 2,   ease: "elastic.out(1,0.7)" },"< = .1")
+		.from(".rh-static-item1 .rh-static-gallery1 li:nth-child(3)", { opacity: 0, rotate:'0deg', xPercent: -50, yPercent: 50, duration: 2,   ease: "elastic.out(1,0.7)" },"< = .15")
+		.from(".rh-static-item1 .rh-static-gallery1 li:nth-child(4)", { opacity: 0, rotate:'0deg',  xPercent: 50, yPercent: 50, duration: 2,   ease: "elastic.out(1,0.7)" },"< = .2")
+		.from(".rh-static-item1 .rh-static-gallery1 li:nth-child(5)", { opacity: 0, rotate:'0deg',  yPercent: 20, xPercent: 50, duration: 2,   ease: "elastic.out(1,0.7)" },"< = .25")
+
+	};
 
 })(jQuery);

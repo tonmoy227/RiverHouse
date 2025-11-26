@@ -8,8 +8,11 @@
 		@media #{$xl} {
 			left: -20%;
 		}
-		img {
-			mix-blend-mode: luminosity;
+		.item-img {
+			img {
+				filter: grayscale(1);
+				mix-blend-mode: luminosity;
+			}
 		}
 		@media #{$lg,$md,$sm,$xs,$xxs} {
 			display: none;

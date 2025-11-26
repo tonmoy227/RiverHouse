@@ -191,6 +191,10 @@
 		border-radius: 8px;
 		padding: 10px 32px;
 		white-space: nowrap;
+		transition: all 300ms ease-in-out;
 		background-color: var(--rh-prime-c);
+		&:hover {
+			background-color: #000;
+		}
 	}
 }

@@ -1,8 +1,11 @@
 .rh-testi-sec {
-	z-index: 1;
 	.rh-testi-wrap {
+		z-index: 1;
 		padding-top: 130px;
 		padding-bottom: 450px;
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+			padding-bottom: 120px;
+		}
 	}
 	.rh-testi-bg {
 		top: 0;
@@ -27,13 +30,21 @@
 }
 .rh-testi-content {
 	gap: 2px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .rh-testi-img {
 	width: 20%;
 	z-index: 3;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
 	border-radius: 6px;
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		display: none;
+	}
 }
 .rh-testi-item {
 	padding: 30px;
@@ -42,6 +53,15 @@
 	position: relative;
 	background: #FFFFFF75;
 	backdrop-filter: blur(12px);
+	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		max-width: 25%;
+	}
+	@media #{$xl,$lg,$md,$sm} {
+		max-width: 48%;
+	}
+	@media #{$xs,$xxs} {
+		max-width: 100%;
+	}
 	&:nth-child(4) {
 		z-index: 2;
 	}

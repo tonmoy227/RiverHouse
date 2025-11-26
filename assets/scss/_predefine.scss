@@ -149,7 +149,7 @@ body::-webkit-scrollbar-thumb {
 	position: fixed;
 	font-weight: 700;
 	line-height: 72px;
-	background: var(--rh-prime-c1);
+	background: var(--rh-prime-c);
 	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 	i {
 		color: #fff;
@@ -299,12 +299,27 @@ a {
 		display: inherit;
 	}
 }
+@keyframes toLeftFromRight {
+	49% {
+		-webkit-transform: translateX(20%);
+		transform: translateX(20%);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translateX(-20%);
+		transform: translateX(-20%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
 .rh-btn1 {
 	display: inline-block;
 	a {
 		gap: 5px;
 		display: flex;
 		align-items: center;
+		transition: all 300ms ease-in-out;
 		span {
 			color: #fff;
 			font-size: 16px;
@@ -314,6 +329,33 @@ a {
 			border-radius: 50px;
 			padding: 16px 24px 18px;
 			background-color: var(--rh-prime-c);
+			b {
+				font-weight: 500;
+				position: relative;
+				&:before {
+					top: 0;
+					left: 0;
+					opacity: 1;
+					display: block;
+					transition: all 0.5s var(--cube-1);
+					position: relative;
+					content: attr(data-front);
+					transform: translateY(0);
+					color: #fff;
+				}
+				&:after {
+					top: 0;
+					left: 0;
+					opacity: 0;
+					width: 100%;
+					display: block;
+					transition: all 0.5s var(--cube-1);
+					position: absolute;
+					content: attr(data-back);
+					transform: translateY(100%);
+					color: #fff;
+				}
+			}
 			i {
 				top: 12px;
 				right: 0px;
@@ -333,6 +375,7 @@ a {
 			justify-content: center;
 			color: var(--rh-prime-c);
 			transform: rotate(-45deg);
+			transition: all 300ms ease-in-out;
 			border: 4px solid var(--rh-prime-c);
 			background-color: var(--rh-title-color);
 		}
@@ -346,6 +389,29 @@ a {
 				background-color: #fff;
 				color: var(--rh-title-color);
 				border: 4px solid var(--rh-title-color);
+			}
+		}
+	}
+	&:hover {
+		a {
+			gap: 0;
+			span {
+				b {
+					&:before {
+						opacity: 0;
+						transform: translateY(-100%);
+					}
+					&:after {
+						opacity: 1;
+						transform: translateY(0%);
+					}
+				}
+			}
+			.btn-icon {
+				transform: rotate(0deg);
+				&:before {
+					animation: toLeftFromRight 0.5s forwards;
+				}
 			}
 		}
 	}
