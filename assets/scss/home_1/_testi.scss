@@ -2,7 +2,7 @@
 	.rh-testi-wrap {
 		z-index: 1;
 		padding-top: 130px;
-		padding-bottom: 450px;
+		padding-bottom: 160px;
 		@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
 			padding-bottom: 120px;
 		}
@@ -16,6 +16,7 @@
 		&:before {
 			top: 0;
 			left: 0;
+			z-index: 1;
 			width: 100%;
 			content: '';
 			height: 788px;
@@ -51,7 +52,7 @@
 	max-width: 20%;
 	border-radius: 6px;
 	position: relative;
-	background: #FFFFFF75;
+	background: rgba(255, 255, 255, 0.25);
 	backdrop-filter: blur(12px);
 	@media #{$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
 		max-width: 25%;
@@ -62,8 +63,18 @@
 	@media #{$xs,$xxs} {
 		max-width: 100%;
 	}
+	&:nth-child(1) {
+		background: rgba(255, 255, 255, 0.65);
+	}
+	&:nth-child(2) {
+		background: rgba(255, 255, 255, 0.30);
+	}
 	&:nth-child(4) {
 		z-index: 2;
+		background: rgba(255, 255, 255, 0.30);
+	}
+	&:nth-child(5) {
+		background: rgba(255, 255, 255, 0.65);
 	}
 	li {
 		color: #FFAA00;

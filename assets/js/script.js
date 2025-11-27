@@ -419,8 +419,8 @@ Last change:    00/00/00
 		var ATWORKPROCESS = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.rh-testi-sec',
-				start: "top -10%",
-				end: "top -100%",
+				start: "top 5%",
+				end: "bottom top",
 				scrub: 1,
 				pin: true,
 				pinSpacing: true,
@@ -429,10 +429,10 @@ Last change:    00/00/00
 
 		});
 		ATWORKPROCESS
-		.from( ".rh-testi-item:nth-child(1)" , { yPercent: 10, xPercent: 185, rotate: -12,   duration: 1, ease: "power2.out"})
-		.from( ".rh-testi-item:nth-child(2)" , { yPercent: 3,  xPercent: 95, rotate: -8,   duration: 1, ease: "power2.out"},"<")
-		.from( ".rh-testi-item:nth-child(4)" , { yPercent: 3,  xPercent: -92, rotate: 8,   duration: 1, ease: "power2.out"},"<")
-		.from( ".rh-testi-item:nth-child(5)" , { yPercent: 10,  xPercent: -185, rotate: 10,   duration: 1, ease: "power2.out"},"<")
+		.from( ".rh-testi-item:nth-child(1)" , { opacity: 0, yPercent: 10, xPercent: 195, rotate: -12,   duration: 1, ease: "power2.out"})
+		.from( ".rh-testi-item:nth-child(2)" , { opacity: 0, yPercent: 3,  xPercent: 105, rotate: -8,   duration: 1, ease: "power2.out"},"<")
+		.from( ".rh-testi-item:nth-child(4)" , { opacity: 0, yPercent: 3,  xPercent: -105, rotate: 8,   duration: 1, ease: "power2.out"},"<")
+		.from( ".rh-testi-item:nth-child(5)" , { opacity: 0, yPercent: 10,  xPercent: -195, rotate: 10,   duration: 1, ease: "power2.out"},"<")
 
 	};
 

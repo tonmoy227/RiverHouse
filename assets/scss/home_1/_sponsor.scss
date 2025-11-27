@@ -22,15 +22,22 @@
 }
 .rh-sponsor-img {
 	.item-img {
-		height: 90px;
+		height: 100px;
 		display: flex;
 		cursor: pointer;
 		align-items: center;
 		justify-content: center;
+		img {
+			opacity: .6;
+			transition: all 500ms ease-in-out;
+		}
 	}
 	&:hover {
 		.item-img {
 			animation: hithere 1s ease infinite;
+			img {
+				opacity: 1;
+			}
 		}
 	}
 }

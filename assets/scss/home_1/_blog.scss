@@ -5,6 +5,7 @@
 		max-width: 605px;
 	}
 	.desc-text {
+		color: #000000;
 		max-width: 530px;
 		@media #{$lg,$md,$sm,$xs,$xxs} {
 			text-align: left !important;

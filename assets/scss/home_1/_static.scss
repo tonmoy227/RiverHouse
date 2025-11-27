@@ -143,6 +143,10 @@
 			mix-blend-mode: luminosity;
 		}
 	}
+	.shadow-shape {
+		left: -35%;
+		bottom: -35%;
+	}
 }
 
 .rh-st-item-wrapper {
@@ -169,7 +173,7 @@
 	width: 240px;
 	border-radius: 6px;
 	border: 6px solid #fff;
-	img {
+	img,video {
 		border-radius: 6px;
 	}
 	@media #{$sm,$xs,$xxs} {
@@ -201,10 +205,10 @@
 }
 .rh-static-img-wrap {
 	left: -10px;
-    width: 115%;
-    bottom: -50px;
-    position: absolute;
-    transform: rotate(-15deg);
+	width: 115%;
+	bottom: -50px;
+	position: absolute;
+	transform: rotate(-15deg);
 	.item-wrap1,
 	.item-wrap2,
 	.item-wrap3 {
